@@ -1,0 +1,1321 @@
+{
+  "resources": [
+    {
+      "_type": "Item",
+      "name": "Copper Ore"
+    },
+    {
+      "_type": "Item",
+      "name": "Tin Ore"
+    },
+    {
+      "_type": "Item",
+      "name": "Iron Ore"
+    },
+    {
+      "_type": "Item",
+      "name": "Silver Ore"
+    },
+    {
+      "_type": "Item",
+      "name": "Coal"
+    },
+    {
+      "_type": "Item",
+      "name": "Mithril Ore"
+    },
+    {
+      "_type": "Item",
+      "name": "Gold Ore"
+    },
+    {
+      "_type": "Item",
+      "name": "Adamantite Ore"
+    },
+    {
+      "_type": "Item",
+      "name": "Luminite"
+    },
+    {
+      "_type": "Item",
+      "name": "Runite Ore"
+    },
+    {
+      "_type": "Item",
+      "name": "Orichalcite Ore"
+    },
+    {
+      "_type": "Item",
+      "name": "Drakolith"
+    },
+    {
+      "_type": "Item",
+      "name": "Necrite Ore"
+    },
+    {
+      "_type": "Item",
+      "name": "Phasmatite"
+    },
+    {
+      "_type": "Item",
+      "name": "Banite Ore"
+    },
+    {
+      "_type": "Item",
+      "name": "Light Animica"
+    },
+    {
+      "_type": "Item",
+      "name": "Dark Animica"
+    },
+    {
+      "_type": "Item",
+      "name": "Bronze Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Iron Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Steel Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Mithril Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Gold Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Adamant Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Rune Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Orikalkum Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Necronium Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Bane Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Eldar Rune Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Concentrated Alloy Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Enriched Alloy Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Immaculate Alloy Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Glorious Bar"
+    },
+    {
+      "_type": "Item",
+      "name": "Masterwork Plate"
+    },
+    {
+      "_type": "Item",
+      "name": "Curved Masterwork Plate"
+    },
+    {
+      "_type": "Item",
+      "name": "Untempered Masterwork Armour Piece"
+    },
+    {
+      "_type": "Item",
+      "name": "Masterwork Armour Piece"
+    },
+    {
+      "_type": "Item",
+      "name": "Lined Masterwork Armour Piece"
+    },
+    {
+      "_type": "Item",
+      "name": "Unfinished Masterwork Helm"
+    },
+    {
+      "_type": "Item",
+      "name": "Unfinished Masterwork Platebody"
+    },
+    {
+      "_type": "Item",
+      "name": "Unfinished Masterwork Platelegs"
+    },
+    {
+      "_type": "Item",
+      "name": "Unfinished Masterwork Boots"
+    },
+    {
+      "_type": "Item",
+      "name": "Unfinished Masterwork Gloves"
+    },
+    {
+      "_type": "Item",
+      "name": "Masterwork Helm"
+    },
+    {
+      "_type": "Item",
+      "name": "Masterwork Platebody"
+    },
+    {
+      "_type": "Item",
+      "name": "Masterwork Platelegs"
+    },
+    {
+      "_type": "Item",
+      "name": "Masterwork Boots"
+    },
+    {
+      "_type": "Item",
+      "name": "Masterwork Gloves"
+    },
+    {
+      "_type": "Item",
+      "name": "Leather"
+    },
+    {
+      "_type": "Item",
+      "name": "Orikalkum Armoured Boots"
+    },
+    {
+      "_type": "Item",
+      "name": "Orikalkum Armoured Boots+1"
+    },
+    {
+      "_type": "Item",
+      "name": "Orikalkum Armoured Boots+2"
+    },
+    {
+      "_type": "Item",
+      "name": "Orikalkum Armoured Boots+3"
+    },
+    {
+      "_type": "Item",
+      "name": "Orikalkum Burial Armoured Boots"
+    },
+    {
+      "_type": "Item",
+      "name": "Necronium Platebody"
+    },
+    {
+      "_type": "Item",
+      "name": "Necronium Platebody+1"
+    },
+    {
+      "_type": "Item",
+      "name": "Necronium Platebody+2"
+    },
+    {
+      "_type": "Item",
+      "name": "Necronium Platebody+3"
+    },
+    {
+      "_type": "Item",
+      "name": "Necronium Platebody+4"
+    },
+    {
+      "_type": "Item",
+      "name": "Necronium Burial Platebody"
+    }
+  ],
+  "transformations": [
+    {
+      "mats": [],
+      "to": "Copper Ore",
+      "exp": {
+        "mining": 10.56
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "mining": 1
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Tin Ore",
+      "exp": {
+        "mining": 10.56
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "mining": 1
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Iron Ore",
+      "exp": {
+        "mining": 32.64
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "mining": 10
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Silver Ore",
+      "exp": {
+        "mining": 40
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "mining": 20
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Coal",
+      "exp": {
+        "mining": 50
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "mining": 20
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Mithril Ore",
+      "exp": {
+        "mining": 69.12
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "mining": 30
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Gold Ore",
+      "exp": {
+        "mining": 65
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "mining": 40
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Adamantite Ore",
+      "exp": {
+        "mining": 109.44
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "mining": 40
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Luminite",
+      "exp": {
+        "mining": 54
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "mining": 40
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Runite Ore",
+      "exp": {
+        "mining": 182.4
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "mining": 50
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Orichalcite Ore",
+      "exp": {
+        "mining": 436.8
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "mining": 60
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Drakolith",
+      "exp": {
+        "mining": 436.8
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "mining": 60
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Necrite Ore",
+      "exp": {
+        "mining": 416.0
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "mining": 70
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Phasmatite",
+      "exp": {
+        "mining": 416
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "mining": 70
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Banite Ore",
+      "exp": {
+        "mining": 557.6
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "mining": 80
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Light Animica",
+      "exp": {
+        "mining": 672.0
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "mining": 90
+        }
+      }
+    },
+    {
+      "mats": [],
+      "to": "Dark Animica",
+      "exp": {
+        "mining": 672.0
+      },
+      "amount": 1,
+      "type": "Mining",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "mining": 90
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Copper Ore",
+          "amount": 1
+        },
+        {
+          "name": "Tin Ore",
+          "amount": 1
+        }
+      ],
+      "to": "Bronze Bar",
+      "exp": {
+        "smithing": 1
+      },
+      "amount": 1,
+      "type": "Furnace",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "smithing": 1
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Iron Ore",
+          "amount": 2
+        }
+      ],
+      "to": "Iron Bar",
+      "exp": {
+        "smithing": 2
+      },
+      "amount": 1,
+      "type": "Furnace",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "smithing": 10
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Iron Ore",
+          "amount": 1
+        },
+        {
+          "name": "Coal",
+          "amount": 1
+        }
+      ],
+      "to": "Steel Bar",
+      "exp": {
+        "smithing": 3
+      },
+      "amount": 1,
+      "type": "Furnace",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "smithing": 20
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Mithril Ore",
+          "amount": 1
+        },
+        {
+          "name": "Coal",
+          "amount": 1
+        }
+      ],
+      "to": "Mithril Bar",
+      "exp": {
+        "smithing": 5
+      },
+      "amount": 1,
+      "type": "Furnace",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "smithing": 30
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Adamantite Ore",
+          "amount": 1
+        },
+        {
+          "name": "Luminite",
+          "amount": 1
+        }
+      ],
+      "to": "Adamant Bar",
+      "exp": {
+        "smithing": 7
+      },
+      "amount": 1,
+      "type": "Furnace",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "smithing": 40
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Runite Ore",
+          "amount": 1
+        },
+        {
+          "name": "Luminite",
+          "amount": 1
+        }
+      ],
+      "to": "Rune Bar",
+      "exp": {
+        "smithing": 10
+      },
+      "amount": 1,
+      "type": "Furnace",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "smithing": 50
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Orichalcite Ore",
+          "amount": 1
+        },
+        {
+          "name": "Drakolith",
+          "amount": 1
+        }
+      ],
+      "to": "Orikalkum Bar",
+      "exp": {
+        "smithing": 13
+      },
+      "amount": 1,
+      "type": "Furnace",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 60
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Necrite Ore",
+          "amount": 1
+        },
+        {
+          "name": "Phasmatite",
+          "amount": 1
+        }
+      ],
+      "to": "Necronium Bar",
+      "exp": {
+        "smithing": 17
+      },
+      "amount": 1,
+      "type": "Furnace",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 70
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Banite Ore",
+          "amount": 2
+        }
+      ],
+      "to": "Bane Bar",
+      "exp": {
+        "smithing": 21
+      },
+      "amount": 1,
+      "type": "Furnace",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 80
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Rune Bar",
+          "amount": 1
+        },
+        {
+          "name": "Light Animica",
+          "amount": 1
+        },
+        {
+          "name": "Dark Animica",
+          "amount": 1
+        }
+      ],
+      "to": "Eldar Rune Bar",
+      "exp": {
+        "smithing": 26
+      },
+      "amount": 1,
+      "type": "Furnace",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 90
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Bronze Bar",
+          "amount": 1
+        },
+        {
+          "name": "Iron Bar",
+          "amount": 1
+        },
+        {
+          "name": "Steel Bar",
+          "amount": 1
+        },
+        {
+          "name": "Mithril Bar",
+          "amount": 1
+        },
+        {
+          "name": "Adamant Bar",
+          "amount": 1
+        },
+        {
+          "name": "Rune Bar",
+          "amount": 1
+        },
+        {
+          "name": "Orikalkum Bar",
+          "amount": 1
+        },
+        {
+          "name": "Necronium Bar",
+          "amount": 1
+        },
+        {
+          "name": "Bane Bar",
+          "amount": 1
+        },
+        {
+          "name": "Eldar Rune Bar",
+          "amount": 1
+        }
+      ],
+      "to": "Concentrated Alloy Bar",
+      "exp": {
+        "smithing": 10
+      },
+      "amount": 1,
+      "type": "Furnace",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 99
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Concentrated Alloy Bar",
+          "amount": 5
+        }
+      ],
+      "to": "Enriched Alloy Bar",
+      "exp": {
+        "smithing": 10
+      },
+      "amount": 1,
+      "type": "Furnace",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 99
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Enriched Alloy Bar",
+          "amount": 10
+        }
+      ],
+      "to": "Immaculate Alloy Bar",
+      "exp": {
+        "smithing": 10
+      },
+      "amount": 1,
+      "type": "Furnace",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 99
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Gold Ore",
+          "amount": 1
+        }
+      ],
+      "to": "Gold Bar",
+      "exp": {
+        "smithing": 7
+      },
+      "amount": 1,
+      "type": "Furnace",
+      "requirements": {
+        "members": false,
+        "skills": {
+          "smithing": 40
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Immaculate Alloy Bar",
+          "amount": 1
+        }
+      ],
+      "to": "Glorious Bar",
+      "exp": {
+        "smithing": 1000
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 99
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Glorious Bar",
+          "amount": 1
+        }
+      ],
+      "to": "Masterwork Plate",
+      "exp": {
+        "smithing": 10
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 99
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Masterwork Plate",
+          "amount": 1
+        }
+      ],
+      "to": "Curved Masterwork Plate",
+      "exp": {
+        "smithing": 10
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 99
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Curved Masterwork Plate",
+          "amount": 1
+        }
+      ],
+      "to": "Untempered Masterwork Armour Piece",
+      "exp": {
+        "smithing": 10
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 99
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Untempered Masterwork Armour Piece",
+          "amount": 1
+        }
+      ],
+      "to": "Masterwork Armour Piece",
+      "exp": {
+        "smithing": 10
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 99
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Masterwork Armour Piece",
+          "amount": 1
+        },
+        {
+          "name": "Leather",
+          "amount": 1
+        }
+      ],
+      "to": "Lined Masterwork Armour Piece",
+      "exp": {
+        "smithing": 10
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 99
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Lined Masterwork Armour Piece",
+          "amount": 2
+        }
+      ],
+      "to": "Unfinished Masterwork Helm",
+      "exp": {
+        "smithing": 20
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 99
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Lined Masterwork Armour Piece",
+          "amount": 5
+        }
+      ],
+      "to": "Unfinished Masterwork Platebody",
+      "exp": {
+        "smithing": 50
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 99
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Lined Masterwork Armour Piece",
+          "amount": 3
+        }
+      ],
+      "to": "Unfinished Masterwork Platelegs",
+      "exp": {
+        "smithing": 30
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 99
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Lined Masterwork Armour Piece",
+          "amount": 1
+        }
+      ],
+      "to": "Unfinished Masterwork Boots",
+      "exp": {
+        "smithing": 10
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 99
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Lined Masterwork Armour Piece",
+          "amount": 1
+        }
+      ],
+      "to": "Unfinished Masterwork Gloves",
+      "exp": {
+        "smithing": 10
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 99
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Orikalkum Bar",
+          "amount": 1
+        }
+      ],
+      "to": "Orikalkum Armoured Boots",
+      "exp": {
+        "smithing": 350
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 60
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Orikalkum Bar",
+          "amount": 1
+        },
+        {
+          "name": "Orikalkum Armoured Boots",
+          "amount": 1
+        }
+      ],
+      "to": "Orikalkum Armoured Boots+1",
+      "exp": {
+        "smithing": 350
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 60
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Orikalkum Bar",
+          "amount": 2
+        },
+        {
+          "name": "Orikalkum Armoured Boots+1",
+          "amount": 1
+        }
+      ],
+      "to": "Orikalkum Armoured Boots+2",
+      "exp": {
+        "smithing": 700
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 60
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Orikalkum Bar",
+          "amount": 4
+        },
+        {
+          "name": "Orikalkum Armoured Boots+2",
+          "amount": 1
+        }
+      ],
+      "to": "Orikalkum Armoured Boots+3",
+      "exp": {
+        "smithing": 1400
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 60
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Orikalkum Armoured Boots+3",
+          "amount": 1
+        }
+      ],
+      "to": "Orikalkum Burial Armoured Boots",
+      "exp": {
+        "smithing": 1400
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 60
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Necronium Bar",
+          "amount": 5
+        }
+      ],
+      "to": "Necronium Platebody",
+      "exp": {
+        "smithing": 2500
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 70
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Necronium Bar",
+          "amount": 5
+        },
+        {
+          "name": "Necronium Platebody",
+          "amount": 1
+        }
+      ],
+      "to": "Necronium Platebody+1",
+      "exp": {
+        "smithing": 2500
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 70
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Necronium Bar",
+          "amount": 10
+        },
+        {
+          "name": "Necronium Platebody+1",
+          "amount": 1
+        }
+      ],
+      "to": "Necronium Platebody+2",
+      "exp": {
+        "smithing": 5000
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 70
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Necronium Bar",
+          "amount": 20
+        },
+        {
+          "name": "Necronium Platebody+2",
+          "amount": 1
+        }
+      ],
+      "to": "Necronium Platebody+3",
+      "exp": {
+        "smithing": 10000
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 70
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Necronium Bar",
+          "amount": 40
+        },
+        {
+          "name": "Necronium Platebody+3",
+          "amount": 1
+        }
+      ],
+      "to": "Necronium Platebody+4",
+      "exp": {
+        "smithing": 20000
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 70
+        }
+      }
+    },
+    {
+      "mats": [
+        {
+          "name": "Necronium Platebody+4",
+          "amount": 1
+        }
+      ],
+      "to": "Necronium Burial Platebody",
+      "exp": {
+        "smithing": 20000
+      },
+      "amount": 1,
+      "type": "Anvil",
+      "requirements": {
+        "members": true,
+        "skills": {
+          "smithing": 70
+        }
+      }
+    }
+  ]
+}
