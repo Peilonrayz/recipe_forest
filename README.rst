@@ -1,4 +1,4 @@
-recipe_forest
+Recipe Forest
 =============
 
 .. image:: https://travis-ci.com/Peilonrayz/recipe_forest.svg?branch=master
@@ -8,7 +8,7 @@ recipe_forest
 About
 -----
 
-This is a skeleton project to have a standardized and concrete base for all projects.
+Build recipe trees for some games.
 
 Installation
 ------------
@@ -37,4 +37,4 @@ To run all tests run ``nox``. No venv is needed; nox makes all of them for us.
 License
 -------
 
-recipe_forest is available under the MIT license.
+Recipe Forest is available under the MIT license.

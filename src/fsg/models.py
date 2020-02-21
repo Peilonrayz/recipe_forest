@@ -1,8 +1,8 @@
+import dataclasses
 import datetime
 import enum
 import itertools
-import dataclasses
-from typing import Optional, List
+from typing import List, Optional
 
 from typing_json.public import dataclasses_json
 
@@ -36,15 +36,11 @@ class GroupPerson:
     def get_events(self):
         return (
             [Event(self.joined or self.person.birth, events.Friendship.FRIENDS)]
+            + ([] if self.events is None else self.events)
             + (
                 []
-                if self.events is None else
-                self.events
-            )
-            + (
-                []
-                if self.left is None else
-                [Event(self.left, events.Friendship.NOT_FRIENDS)]
+                if self.left is None
+                else [Event(self.left, events.Friendship.NOT_FRIENDS)]
             )
         )
 
@@ -61,26 +57,25 @@ class Group:
     def get_events(self):
         return (
             [Event(self.start, events.Friendship.FRIENDS)]
+            + ([] if self.events is None else self.events)
             + (
                 []
-                if self.events is None else
-                self.events
-            )
-            + (
-                []
-                if self.end is None else
-                [Event(self.end, events.Friendship.NOT_FRIENDS)]
+                if self.end is None
+                else [Event(self.end, events.Friendship.NOT_FRIENDS)]
             )
         )
 
     def get_relationships(self):
         _events = self.get_events()
-        people_events = sorted([
-            (person.person.id, list(person.get_events()))
-            for person in self.people
-        ])
-        for (id_1, events_1), (id_2, events_2) in itertools.combinations(people_events, 2):
-            yield (id_1, id_2), events.merge_new_friendship([_events, events_1, events_2])
+        people_events = sorted(
+            [(person.person.id, list(person.get_events())) for person in self.people]
+        )
+        for (id_1, events_1), (id_2, events_2) in itertools.combinations(
+            people_events, 2
+        ):
+            yield (id_1, id_2), events.merge_new_friendship(
+                [_events, events_1, events_2]
+            )
 
 
 @dataclasses_json.dataclass_json
@@ -98,26 +93,16 @@ class Relationship:
         if self.events is not None:
             if self.start is not None or self.end is not None or self.type is not None:
                 raise ValueError("Can't use events and non event in relationships.")
-            return (
-                [
-                    Event(default_start, event.type)
-                    if event.date is None else
-                    event
-                    for event in self.events
-                ]
-                + (
-                    []
-                    if (end) is None else
-                    [Event(end, events.Friendship.NOT_FRIENDS)]
-                )
-            )
-        return (
-            [Event(self.start or default_start, self.type or events.Friendship.FRIENDS)]
-            + (
-                []
-                if (self.end or end) is None else
-                [Event((self.end or end), events.Friendship.NOT_FRIENDS)]
-            )
+            return [
+                Event(default_start, event.type) if event.date is None else event
+                for event in self.events
+            ] + ([] if (end) is None else [Event(end, events.Friendship.NOT_FRIENDS)])
+        return [
+            Event(self.start or default_start, self.type or events.Friendship.FRIENDS)
+        ] + (
+            []
+            if (self.end or end) is None
+            else [Event((self.end or end), events.Friendship.NOT_FRIENDS)]
         )
 
     def get_relationships(self):
@@ -141,15 +126,16 @@ class Data:
                 relationships.setdefault(ids, []).append(_events)
 
         return {
-            ids: events.merge_friends(_events)
-            for ids, _events in relationships.items()
+            ids: events.merge_friends(_events) for ids, _events in relationships.items()
         }
 
     def get_relationships(self):
         relationships = self.get_group_relationships()
         for relationship in self.relationships:
             for ids, _events in relationship.get_relationships():
-                relationships[ids] = events.overwrite_events(relationships.get(id, []), _events)
+                relationships[ids] = events.overwrite_events(
+                    relationships.get(id, []), _events
+                )
         return relationships
 
     def get_edges(self):

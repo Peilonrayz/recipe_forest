@@ -55,31 +55,30 @@ class Mats:
     transformations: List[InternalVector]
 
 
-RESOURCES = {
-    'Item': dataclass_json(models.Item).schema()
-}
+RESOURCES = {"Item": dataclass_json(models.Item).schema()}
 
 
 def _load_nodes(resources: List[Any]):
     nodes = {}
     for resource in resources:
-        model = RESOURCES[resource.pop('_type')].load(resource)
+        model = RESOURCES[resource.pop("_type")].load(resource)
         nodes[model.name] = models.Node(model, [], [])
     return nodes
 
 
-def load_transformations(transformations: List[InternalVector], nodes: Dict[str, models.Node]):
+def load_transformations(
+    transformations: List[InternalVector], nodes: Dict[str, models.Node]
+):
     for trans in transformations:
         yield models.Vector(
-            tuple([
-                models.NameAmount(nodes[mat.name], mat.amount)
-                for mat in trans.mats
-            ]),
+            tuple(
+                [models.NameAmount(nodes[mat.name], mat.amount) for mat in trans.mats]
+            ),
             nodes[trans.to],
             trans.exp,
             trans.amount,
             trans.type,
-            trans.requirements
+            trans.requirements,
         )
 
 

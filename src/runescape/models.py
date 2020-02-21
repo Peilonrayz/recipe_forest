@@ -7,7 +7,7 @@ from typing import Any, List, Optional, Tuple, TypeVar, Union
 
 from .transparent_lists import Item, Items, ItemsCommonMixin
 
-T = TypeVar('T')
+T = TypeVar("T")
 
 
 def reduce_req_exp(values, op=operator.add):
@@ -102,7 +102,7 @@ class Node:
                 reqs, exp = reduce_req_exp(
                     mat.name.make_from(items, mat.amount) for mat in recipe.mats
                 )
-                exp += Experience_([Experience('Smithing', recipe.exp.smithing)])
+                exp += Experience_([Experience("Smithing", recipe.exp.smithing)])
             else:
                 reqs, exp = Requirements([Requirement(self.item, 1)]), Experience_()
         reqs *= amount

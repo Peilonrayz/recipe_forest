@@ -1,22 +1,18 @@
 from __future__ import annotations
 
-from typing import Any, List, Generic, TypeVar, Union
 import dataclasses
+import functools
 import math
 import operator
-import functools
+from typing import Any, Generic, List, TypeVar, Union
 
-
-T = TypeVar('T')
+T = TypeVar("T")
 
 NULL = object()
 
 
 def _get_key_item(self):
-    return {
-        item.item: item
-        for item in self._data
-    }
+    return {item.item: item for item in self._data}
 
 
 def _merge(fn, first, second):
@@ -40,29 +36,28 @@ def _build_special(method):
         if isinstance(other, (int, float)):
             return type(self)(_scalar_merge(method, self, other))
         if not isinstance(other, type(self)):
-            raise TypeError(f'{other!r} is not an instance of {type(self)!r}')
-        items = _merge(
-            method,
-            _get_key_item(self),
-            _get_key_item(other),
-        )
+            raise TypeError(f"{other!r} is not an instance of {type(self)!r}")
+        items = _merge(method, _get_key_item(self), _get_key_item(other),)
         return type(self)(items)
+
     return fn
 
+
 BLACKLIST = {
-    '__init__',
-    '__repr__',
-    '__module__',
-    '__qualname__',
-    '__iter__',
-    '__annotations__',
-    '__orig_bases__',
+    "__init__",
+    "__repr__",
+    "__module__",
+    "__qualname__",
+    "__iter__",
+    "__annotations__",
+    "__orig_bases__",
 }
+
 
 class ItemsMeta(type):
     def __new__(self, name, bases, props):
         for key, prop in props.items():
-            if key.startswith('__') and key.endswith('__') and key not in BLACKLIST:
+            if key.startswith("__") and key.endswith("__") and key not in BLACKLIST:
                 props[key] = _build_special(prop)
         return type.__new__(self, name, bases, props)
 
@@ -97,19 +92,20 @@ def _build_item_special(method):
         if isinstance(other, (int, float)):
             pass
         elif not isinstance(other, type(self)):
-            raise TypeError(f'{other!r} is not an instance of {type(self)!r}')
+            raise TypeError(f"{other!r} is not an instance of {type(self)!r}")
         elif self.item != other.item:
             raise ValueError(f"Can't mix conflicting items.")
         else:
             other = other.amount
         return type(self)(self.item, method(self.amount, other))
+
     return fn
 
 
 class ItemMeta(type):
     def __new__(self, name, bases, props):
         for key, prop in props.items():
-            if key.startswith('__') and key.endswith('__') and key not in BLACKLIST:
+            if key.startswith("__") and key.endswith("__") and key not in BLACKLIST:
                 props[key] = _build_item_special(prop)
         return type.__new__(self, name, bases, props)
 
@@ -117,9 +113,11 @@ class ItemMeta(type):
 class Item(metaclass=ItemMeta):
     pass
 
+
 ########
 # Core #
 ########
+
 
 def reduce_req_exp(values, op=operator.add):
     reqs, exps = zip(*values)
@@ -164,7 +162,7 @@ class Ore:
     def make_from(self, items):
         return (
             Requirements([Requirement(self, 1)]),
-            Experiance_([Experiance('Mining', self.exp)])
+            Experiance_([Experiance("Mining", self.exp)]),
         )
 
 
@@ -176,12 +174,10 @@ class Ingot:
 
     def make_from(self, items):
         if self not in items:
-            reqs, exp = reduce_req_exp(
-                r.make_from(items) for r in self.requirements
-            )
+            reqs, exp = reduce_req_exp(r.make_from(items) for r in self.requirements)
         else:
             reqs, exp = Requirements([Requirement(self, 1)]), Experiance_()
-        exp += Experiance_([Experiance('Smithing', self.exp)])
+        exp += Experiance_([Experiance("Smithing", self.exp)])
         return reqs, exp
 
 
@@ -194,34 +190,62 @@ class ForgeItem:
 
     def make_from(self, items):
         if self not in items:
-            reqs, exp = reduce_req_exp(
-                r.make_from(items) for r in self.requirements
-            )
+            reqs, exp = reduce_req_exp(r.make_from(items) for r in self.requirements)
         else:
             reqs, exp = Requirements([Requirement(self, 1)]), Experiance_()
-        exp += Experiance_([Experiance('Smithing', self.exp)])
+        exp += Experiance_([Experiance("Smithing", self.exp)])
         return reqs, exp
 
 
-orichalcite_ore = Ore('Orichalcite Ore', 436.8)
-drakolith_ore = Ore('Drackolith Ore', 436.8)
-orikalkum_bar = Ingot('Orikalkum Ingot', 13, Requirements([Requirement(orichalcite_ore, 1), Requirement(drakolith_ore, 1)]))
-orikalkum_forge_item = ForgeItem('Orikalkum Forge Item', 0, 350, Requirements([Requirement(orikalkum_bar, 1)]))
-orikalkum_forge_item_1 = ForgeItem('Orikalkum Forge Item+1', 1, 350, Requirements([Requirement(orikalkum_forge_item, 1), Requirement(orikalkum_bar, 1)]))
-orikalkum_forge_item_2 = ForgeItem('Orikalkum Forge Item+2', 2, 700, Requirements([Requirement(orikalkum_forge_item_1, 1), Requirement(orikalkum_bar, 2)]))
-orikalkum_forge_item_3 = ForgeItem('Orikalkum Forge Item+3', 3, 1400, Requirements([Requirement(orikalkum_forge_item_2, 1), Requirement(orikalkum_bar, 4)]))
-orikalkum_forge_item_burial = ForgeItem('Orikalkum Forge Item Burial', -1, 1400, Requirements([Requirement(orikalkum_forge_item_3, 1)]))
+orichalcite_ore = Ore("Orichalcite Ore", 436.8)
+drakolith_ore = Ore("Drackolith Ore", 436.8)
+orikalkum_bar = Ingot(
+    "Orikalkum Ingot",
+    13,
+    Requirements([Requirement(orichalcite_ore, 1), Requirement(drakolith_ore, 1)]),
+)
+orikalkum_forge_item = ForgeItem(
+    "Orikalkum Forge Item", 0, 350, Requirements([Requirement(orikalkum_bar, 1)])
+)
+orikalkum_forge_item_1 = ForgeItem(
+    "Orikalkum Forge Item+1",
+    1,
+    350,
+    Requirements([Requirement(orikalkum_forge_item, 1), Requirement(orikalkum_bar, 1)]),
+)
+orikalkum_forge_item_2 = ForgeItem(
+    "Orikalkum Forge Item+2",
+    2,
+    700,
+    Requirements(
+        [Requirement(orikalkum_forge_item_1, 1), Requirement(orikalkum_bar, 2)]
+    ),
+)
+orikalkum_forge_item_3 = ForgeItem(
+    "Orikalkum Forge Item+3",
+    3,
+    1400,
+    Requirements(
+        [Requirement(orikalkum_forge_item_2, 1), Requirement(orikalkum_bar, 4)]
+    ),
+)
+orikalkum_forge_item_burial = ForgeItem(
+    "Orikalkum Forge Item Burial",
+    -1,
+    1400,
+    Requirements([Requirement(orikalkum_forge_item_3, 1)]),
+)
 
-exp = input('Wanted Smithing EXP: ')
+exp = input("Wanted Smithing EXP: ")
 reqs, exps = orikalkum_forge_item_burial.make_from([])
-smith_exp = next(e for e in exps if e.item == 'Smithing')
+smith_exp = next(e for e in exps if e.item == "Smithing")
 amount_needed = math.ceil(int(exp) / smith_exp.amount)
 reqs *= amount_needed
-print('You need:')
+print("You need:")
 for req in reqs:
-    print(f'{req.amount} {req.item.name}')
+    print(f"{req.amount} {req.item.name}")
 
-print('You get:')
+print("You get:")
 exps *= amount_needed
 for exp in exps:
-    print(f'{exp.amount} {exp.item} exp')
+    print(f"{exp.amount} {exp.item} exp")

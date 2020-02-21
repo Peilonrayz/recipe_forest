@@ -1,15 +1,15 @@
 import datetime
 import enum
-import itertools
 import heapq
+import itertools
 
 
 class Friendship(enum.Enum):
-    ENIMIES = (2, 'red')
-    NOT_FRIENDS = (0, '')
-    IN_TOUCH = (1, 'gray')
-    FRIENDS = (2, 'green')
-    BEST_FRIENDS = (3, 'blue')
+    ENIMIES = (2, "red")
+    NOT_FRIENDS = (0, "")
+    IN_TOUCH = (1, "gray")
+    FRIENDS = (2, "green")
+    BEST_FRIENDS = (3, "blue")
 
 
 def _add_friendship_identifier(friendships):
@@ -49,7 +49,11 @@ def _merge_new_friendship(friendships):
     for event, id_ in merged_friendships:
         started = event.type == Friendship.FRIENDS
         started_friendships[id_] = started
-        if started and len(started_friendships) == len(friendships) and all(started_friendships.values()):
+        if (
+            started
+            and len(started_friendships) == len(friendships)
+            and all(started_friendships.values())
+        ):
             yield event, id_
             break
     yield from merged_friendships

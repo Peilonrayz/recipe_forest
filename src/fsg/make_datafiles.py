@@ -1,16 +1,16 @@
+import dataclasses
 import datetime
 import enum
 import itertools
-import dataclasses
 
 
 @dataclasses.dataclass
 class Friendship(enum.Enum):
-    ENIMIES = (2, 'red')
-    NOT_FRIENDS = (0, '')
-    IN_TOUCH = (1, 'gray')
-    FRIENDS = (2, 'green')
-    BEST_FRIENDS = (3, 'blue')
+    ENIMIES = (2, "red")
+    NOT_FRIENDS = (0, "")
+    IN_TOUCH = (1, "gray")
+    FRIENDS = (2, "green")
+    BEST_FRIENDS = (3, "blue")
 
 
 @dataclasses.dataclass
@@ -37,16 +37,8 @@ class GroupPerson:
     def get_events(self):
         return (
             [Event(self.joined or self.person.birth, Friendship.FRIENDS)]
-            + (
-                []
-                if self.events is None else
-                self.events
-            )
-            + (
-                []
-                if self.left is None else
-                [Event(self.left, Friendship.NOT_FRIENDS)]
-            )
+            + ([] if self.events is None else self.events)
+            + ([] if self.left is None else [Event(self.left, Friendship.NOT_FRIENDS)])
         )
 
 
@@ -61,25 +53,21 @@ class Group:
     def get_events(self):
         return (
             [Event(self.start, Friendship.FRIENDS)]
-            + (
-                []
-                if self.events is None else
-                self.events
-            )
-            + (
-                []
-                if self.end is None else
-                [Event(self.end, Friendship.NOT_FRIENDS)]
-            )
+            + ([] if self.events is None else self.events)
+            + ([] if self.end is None else [Event(self.end, Friendship.NOT_FRIENDS)])
         )
 
     def get_relationships(self):
         events = self.get_events()
-        people_events = sorted([
-            (person.person.id, merge_new_friendship(events, person.get_events()))
-            for person in self.people
-        ])
-        for (id_1, events_1), (id_2, events_2) in itertools.combinations(people_events, 2):
+        people_events = sorted(
+            [
+                (person.person.id, merge_new_friendship(events, person.get_events()))
+                for person in self.people
+            ]
+        )
+        for (id_1, events_1), (id_2, events_2) in itertools.combinations(
+            people_events, 2
+        ):
             yield id_1, id_2, merge_new_friendship(events_1, events_2)
 
 
@@ -96,14 +84,12 @@ class Relationship:
             if self.start is not None or self.end is not None or self.type is not None:
                 raise ValueError("Can't use events and non event in relationships.")
             return list(self.events)
-        return (
-            [Event(self.start or max(p.birth for p in people), self.type or Friendship.FRIENDS)]
-            + (
-                []
-                if self.end is None else
-                [Event(self.end, Friendship.NOT_FRIENDS)]
+        return [
+            Event(
+                self.start or max(p.birth for p in people),
+                self.type or Friendship.FRIENDS,
             )
-        )
+        ] + ([] if self.end is None else [Event(self.end, Friendship.NOT_FRIENDS)])
 
     def get_relationships(self):
         events = self.get_events()
@@ -151,7 +137,11 @@ def _merge_new_friendship(friendships):
     for event, id_ in merged_friendships:
         started = event.type == Friendship.FRIENDS
         started_friendships[id_] = started
-        if started and len(started_friendships) == len(friendships) and all(started_friendships.values()):
+        if (
+            started
+            and len(started_friendships) == len(friendships)
+            and all(started_friendships.values())
+        ):
             yield event, id_
             break
     yield from merged_friendships
